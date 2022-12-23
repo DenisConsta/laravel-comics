@@ -57,11 +57,11 @@ header {
 }
 
 #top-footer {
-    background-image: url('../assets/img/footer-bg.jpg');
+    background-image: url('../img/footer-bg.jpg');
     background-size: cover;
 
     .logo-bg {
-        background-image: url('../assets/img/dc-logo-bg.png');
+        background-image: url('../img/dc-logo-bg.png');
         background-size: cover;
         background-position: center;
     }
@@ -119,4 +119,33 @@ header {
     }
 
 
+}
+
+#shop {
+    height: 140px;
+    background-color: $color-primary;
+
+    .container {
+        @include displayFlex("both");
+    }
+
+    ul li {
+        @include displayFlex("both");
+        gap: 1rem;
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 400;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        img {
+            height: 50px;
+            max-width: 50px;
+        }
+    }
 }

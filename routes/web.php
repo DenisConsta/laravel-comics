@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\myController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +13,14 @@ use App\Http\Controllers\myController;
 |
 */
 
-Route::get('/', [myController::class, 'index'])->name('home');
+Route::get('/', function () {
+/*
+    $db = config('db.menu');
+
+    return view('home', compact('db')); */
+
+    return view('home');
+})->name('home');
 
 Route::get('/characters', function () {
     return view('characters');

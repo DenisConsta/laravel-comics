@@ -10,6 +10,8 @@
 <body>
     @include('partials.header')
     @yield('content')
+
+    @include('partials.shop')
     @include('partials.footer')
 
 
