@@ -203,6 +203,7 @@ header {
         @include displayFlex("both");
         flex-direction: column;
         cursor: pointer;
+        text-decoration: none;
 
         img {
             height: 180px;

@@ -14,10 +14,10 @@
                 <div class="row row-cols-xl-4 row-cols-xxl-6">
                     <!-- ? Col -->
                     @foreach (config('db.cards') as $card)
-                        <div class="thumb">
+                        <a href=" {{route('card_detail', ['id' =>$card['id']])}} " class="thumb">
                             <img src=" {{ $card['thumb'] }} " alt="">
                             <h3> {{ $card['series'] }} </h3>
-                        </div>
+                        </a>
                     @endforeach
                     <div class="col mb-4">
 

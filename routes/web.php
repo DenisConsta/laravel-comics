@@ -19,7 +19,6 @@ Route::get('/', function () {
 
     return view('home', compact('db')); */
 
-
     return view('home');
 })->name('home');
 
@@ -62,3 +61,12 @@ Route::get('/news', function () {
 Route::get('/shop', function () {
     return view('shop');
 })->name('shop');
+
+
+Route::get('card-detail/{id}', function ($id) {
+
+    $cards_get = array_filter(config('db.cards'), fn($item) => $item['id'] == $id);
+    $card = $cards_get[array_key_first($cards_get)];
+
+    return view('card_detail', compact('card'));
+})->name('card_detail');
